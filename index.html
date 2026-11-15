@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1c2e" />
+  <title>Plan 70.3 · Half Gasteiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow" id="race-date"></p>
+      <h1 id="race-name">Plan 70.3</h1>
+      <p class="distances" id="race-distances"></p>
+      <div class="countdown">
+        <div><span id="days-left">–</span><small>días</small></div>
+        <div><span id="week-now">–</span><small>semana</small></div>
+        <div><span id="phase-now" class="phase-text">–</span><small>fase</small></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-view="week" role="tab">Semana</button>
+    <button class="tab" data-view="plan" role="tab">Plan</button>
+    <button class="tab" data-view="zones" role="tab">Zonas y tests</button>
+    <button class="tab" data-view="gym" role="tab">Gimnasio</button>
+  </nav>
+
+  <main>
+    <section id="view-week" class="view active">
+      <div class="week-nav">
+        <button id="prev-week" aria-label="Semana anterior">‹</button>
+        <div class="week-title">
+          <strong id="week-label"></strong>
+          <span id="week-dates"></span>
+        </div>
+        <button id="next-week" aria-label="Semana siguiente">›</button>
+      </div>
+      <div id="week-summary" class="summary"></div>
+      <div id="week-days" class="days"></div>
+    </section>
+
+    <section id="view-plan" class="view">
+      <p class="lead">29 semanas en bloques de 3 de carga + 1 de descarga. Toca una semana para verla.</p>
+      <div id="plan-list" class="plan-list"></div>
+    </section>
+
+    <section id="view-zones" class="view">
+      <div id="zones-note" class="note"></div>
+      <h2>Zonas</h2>
+      <p class="muted" id="zones-status"></p>
+      <div class="table-wrap"><table id="zones-table"></table></div>
+      <h2>Tests</h2>
+      <div id="tests" class="cards"></div>
+    </section>
+
+    <section id="view-gym" class="view">
+      <h2>Gimnasio</h2>
+      <p class="muted">2 sesiones por semana hasta la semana 12, 1–2 en las semanas 13–24, 1 de mantenimiento en las 25–28 y ninguna en la semana de carrera.</p>
+      <div id="gym" class="cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="updated"></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
